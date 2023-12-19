@@ -263,6 +263,17 @@ footer p {
     padding-left: 0 !important;
   }
 
+  .nav_toggler,
+  .header .container-fluid,
+  footer .container {
+    padding: 0 !important;
+  }
+
+  aside {
+    width: 40rem;
+    margin: auto !important;
+  }
+
   main section:first-child {
     max-width: 90%;
     margin: 0 auto !important;
@@ -274,7 +285,7 @@ footer p {
 
   .box {
     max-width: 90% !important;
-    margin: 6rem auto;
+    margin: 6rem auto !important;
   }
 
   .box input {
@@ -325,6 +336,14 @@ footer p {
   main section {
     margin-left: 1.5rem !important;
     margin-right: 1.5rem !important;
+  }
+
+  aside {
+    width: fit-content;
+  }
+
+  aside section {
+    flex-direction: column;
   }
 
   main section:first-child button {
