@@ -178,8 +178,13 @@ footer * {
 }
 
 footer li {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer ul:nth-of-type(3) li {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
 }
 
 footer li,
@@ -346,12 +351,20 @@ footer p {
     flex-direction: column;
   }
 
+  main .content {
+    padding: 0 0.5rem !important;
+  }
+
   main section:first-child button {
     padding: 1rem 1.5rem !important;
   }
 
   .hero {
     display: none;
+  }
+
+  .box {
+    padding: 6rem 1.5rem !important;
   }
 
   .box div:first-child {
@@ -369,6 +382,11 @@ footer p {
 
   .box input {
     padding: 1.5rem;
+  }
+
+  footer {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
 
   footer section {
