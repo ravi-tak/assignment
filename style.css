@@ -75,11 +75,7 @@ button.bg_blue {
 }
 
 .header {
-  margin: 0 5rem;
-}
-
-nav {
-  margin: 1rem 6rem;
+  margin: 1.5rem 10rem;
 }
 
 .nav_brand button {
@@ -135,6 +131,11 @@ aside p {
 
 .side_img {
   top: -2rem;
+  z-index: -1;
+}
+
+main section:first-child {
+  margin: 0 4rem !important;
 }
 
 main p {
@@ -144,6 +145,12 @@ main p {
 main span {
   color: var(--color-blue) !important;
   font-weight: var(--f-bold);
+}
+
+.navbar_nav li,
+button,
+.play img {
+  cursor: pointer;
 }
 
 .box {
@@ -177,6 +184,12 @@ footer * {
   font-size: var(--fs-m-2);
 }
 
+footer section,
+footer hr {
+  width: 80%;
+  margin: 3rem auto;
+}
+
 footer li {
   margin-left: 0;
   margin-right: 0;
@@ -192,23 +205,43 @@ footer p {
   font-size: var(--fs-s-1);
 }
 
+.logo {
+  font-size: var(--fs-l-1);
+}
+
+.social_media img {
+  width: 100%;
+}
+
+.modal_dialog {
+  max-width: 60% !important;
+}
+
+.modal_content {
+  height: 500px;
+}
+
+.modal_close_btn {
+  padding: 0.25rem 2rem !important;
+  font-size: calc(var(--fs-s-1)) !important;
+  border-radius: var(--border-radius) !important;
+}
+
 @media screen and (max-width: 1400px) {
   .header {
-    margin: 0 !important;
+    margin: 1rem 6rem !important;
   }
 
-  nav {
-    margin: 1rem 3rem;
-  }
-
-  .box {
+  .box,
+  footer section,
+  footer hr {
     width: 90% !important;
   }
 }
 
-@media screen and (max-width: 1228px) {
-  nav {
-    margin: 1rem 2rem;
+@media screen and (max-width: 1247px) {
+  .header {
+    margin: 1rem 3rem;
   }
 
   .navbar_nav li,
@@ -229,10 +262,6 @@ footer p {
     flex-direction: row !important;
   }
 
-  main .col {
-    width: 50% !important;
-  }
-
   main h1 {
     font-size: calc(2 * var(--fs-m-1));
   }
@@ -250,10 +279,12 @@ footer p {
   }
 
   .hero img {
-    width: 100%;
+    width: 100% !important;
   }
 
-  .box {
+  .box,
+  footer section,
+  footer hr {
     width: 100%;
   }
 
@@ -261,9 +292,26 @@ footer p {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .modal_dialog {
+    max-width: 70% !important;
+  }
+
+  .modal_content {
+    height: 500px;
+  }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1100px) {
+  .header {
+    margin: 1rem 2rem !important;
+  }
+
+  .nav_dropdown img,
+  aside {
+    display: none !important;
+  }
+
   .nav_dropdown button {
     padding-left: 0 !important;
   }
@@ -280,15 +328,17 @@ footer p {
   }
 
   main section:first-child {
-    max-width: 90%;
-    margin: 0 auto !important;
+    max-width: 100%;
+    margin: 0 2rem !important;
   }
 
   .side_img {
     display: none;
   }
 
-  .box {
+  .box,
+  footer section,
+  footer hr {
     max-width: 90% !important;
     margin: 6rem auto !important;
   }
@@ -303,13 +353,17 @@ footer p {
     width: 20%;
   }
 
+  .footer {
+    padding: 3rem 0 !important;
+  }
+
   footer * {
     font-size: var(--fs-m-1);
   }
 
   footer section {
     max-width: 100% !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
   }
 
   footer li {
@@ -317,50 +371,42 @@ footer p {
     margin-right: 0 !important;
   }
 
-  footer section:first-child div {
-    margin-right: 1rem !important;
-  }
-
   .social_media li {
     margin-right: 0.5rem !important;
   }
 
-  .play {
+  .play img {
     width: 25%;
+  }
+
+  .modal_content {
+    height: 450px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  main section:first-child {
-    width: 95% !important;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  nav,
-  main section {
-    margin-left: 1.5rem !important;
-    margin-right: 1.5rem !important;
+  .nav_btns button {
+    margin: 1rem 0;
+    padding: 1rem 2rem !important;
   }
 
-  aside {
-    width: fit-content;
-  }
-
-  aside section {
-    flex-direction: column;
-  }
-
-  main .content {
-    padding: 0 0.5rem !important;
-  }
-
-  main section:first-child button {
-    padding: 1rem 1.5rem !important;
+  .content .col:first-child {
+    min-width: 60% !important;
   }
 
   .hero {
-    display: none;
+    position: relative;
+  }
+
+  .hero img {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .box div:first-child {
+    flex-direction: column;
   }
 
   .box {
@@ -368,8 +414,8 @@ footer p {
     padding-right: 1.5rem !important;
   }
 
-  .box div:first-child {
-    flex-direction: column;
+  .box div:last-child {
+    margin: 1rem 0;
   }
 
   .box .position-relative {
@@ -377,29 +423,80 @@ footer p {
     width: 100% !important;
   }
 
-  .box div:last-child {
-    margin: 1rem auto;
+  .box input {
+    padding: 1.25rem;
   }
 
-  .box input {
-    padding: 1.5rem;
+  .box button {
+    width: 100%;
+    padding: 1.25rem 2rem !important;
   }
 
   footer {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+    padding: 1.5rem 2rem !important;
+  }
+
+  footer section:first-child div:first-child {
+    margin-right: 0 !important;
+  }
+
+  .social_media {
+    margin-left: 0 !important;
+  }
+
+  .modal_content {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .nav_btns button {
+    margin: 1rem 0;
+    padding: 0.5rem 1.25rem !important;
+  }
+
+  .header,
+  main section,
+  main section:first-child {
+    margin: 1rem 1.5rem !important;
+  }
+
+  .play button {
+    padding: 0.75rem 1.25rem !important;
+  }
+
+  .play span {
+    font-size: var(--fs-s-1);
+  }
+
+  .hero {
+    display: none;
   }
 
   footer section {
     flex-direction: column !important;
   }
 
-  footer section:first-child div {
-    margin: 1rem 0 !important;
+  footer section:first-child div:nth-of-type(2),
+  footer section:first-child div:nth-of-type(3) {
+    margin-top: 1rem;
   }
 
-  footer ul {
-    display: flex;
-    gap: 5%;
+  .social_media ul {
+    justify-content: start !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .modal_dialog {
+    margin: auto;
+    max-width: 95% !important;
+  }
+
+  .modal_content {
+    height: 350px;
+  }
+
+  .modal_close_btn {
+    padding: 0.25rem 1rem !important;
   }
 }
