@@ -149,7 +149,8 @@ main span {
 
 .navbar_nav li,
 button,
-.play img {
+.play img,
+footer li {
   cursor: pointer;
 }
 
@@ -158,6 +159,12 @@ button,
   margin: 6rem auto;
   border-radius: var(--border-radius);
   box-shadow: var(--border-shadow);
+}
+
+.box img {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6%;
 }
 
 label {
@@ -173,7 +180,7 @@ input {
   display: inline-block;
   border: 2px solid var(--color-gray) !important;
   border-radius: var(--border-radius);
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 2rem 1.25rem 2.75rem;
   font-size: var(--fs-s-1);
 }
 
@@ -289,7 +296,7 @@ footer p {
   }
 
   .box input {
-    padding-left: 1rem;
+    padding-left: 2.5rem;
     padding-right: 1rem;
   }
 
@@ -345,7 +352,7 @@ footer p {
 
   .box input {
     width: 100%;
-    padding-left: 0.5rem;
+    padding-left: 2rem;
     padding-right: 0.5rem;
   }
 
@@ -423,7 +430,12 @@ footer p {
     width: 100% !important;
   }
 
+  .box img {
+    left: 4%;
+  }
+
   .box input {
+    padding-left: 3rem !important;
     padding: 1.25rem;
   }
 
@@ -437,7 +449,7 @@ footer p {
   }
 
   footer section:first-child div:first-child {
-    margin-right: 0 !important;
+    margin-right: 2rem !important;
   }
 
   .social_media {
@@ -473,13 +485,38 @@ footer p {
     display: none;
   }
 
+  .box img {
+    left: 6%;
+  }
+
+  footer section {
+    width: fit-content !important;
+    margin: 0 1.5rem !important;
+  }
+
   footer section {
     flex-direction: column !important;
+  }
+
+  footer section:first-child div:first-child {
+    margin-right: 0 !important;
   }
 
   footer section:first-child div:nth-of-type(2),
   footer section:first-child div:nth-of-type(3) {
     margin-top: 1rem;
+  }
+
+  footer section:last-child {
+    margin: 0 auto !important;
+  }
+
+  footer hr {
+    max-width: 100% !important;
+  }
+
+  footer li {
+    margin: 0.25rem 0 !important;
   }
 
   .social_media ul {
@@ -498,5 +535,11 @@ footer p {
 
   .modal_close_btn {
     padding: 0.25rem 1rem !important;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .box input {
+    padding-left: 2.5rem !important;
   }
 }
